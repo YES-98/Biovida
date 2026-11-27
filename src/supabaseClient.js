@@ -11,10 +11,6 @@ console.log(import.meta.env.VITE_SUPABASE_URL);
     throw new Error("Faltan las variables de entorno de Supabase");
 }*/
 
-fetch("https://fopywtxhgnjcnjqlbaw.supabase.co")
-  .then(r => console.log(r))
-  .catch(e => console.error(e));
-
 export const supabase = createClient(
     supabaseUrl,
     supabaseKey

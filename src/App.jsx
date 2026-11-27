@@ -1,18 +1,15 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 
-import heroImg from "./assets/hero.png";
-import imgHistoria from "./assets/hero.png";
 import Dio from "./assets/dio.png";
 
 import "./App.css";
 
-import Nav from "./Nav";
-import Carousel from "./Carousel";
-import Nosotros from "./Nosotros";
-import Productos from "./Productos";
-import Carrito from "./Carrito";
-
+import Nav from "./Nav.jsx";
+import Carousel from "./Carousel.jsx";
+import Nosotros from "./Nosotros.jsx";
+import Productos from "./Productos.jsx";
+import Carrito from "./Carrito.jsx";
 
 function Inicio() {
   const [count, setCount] = useState(0);

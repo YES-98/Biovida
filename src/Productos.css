@@ -1,0 +1,425 @@
+.productos-section{
+  padding:80px 0;
+  background:#fff;
+}
+
+.productos-titulo{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.productos-titulo h2{
+  color:#2F5D34;
+  font-weight:700;
+}
+
+.productos-titulo p{
+  color:#666;
+}
+
+.producto-card{
+  border:none;
+  border-radius:20px;
+  overflow:hidden;
+
+  transition:.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.producto-card:hover{
+  transform:translateY(-10px);
+}
+
+.producto-img{
+  height:250px;
+  object-fit:cover;
+}
+
+.producto-card .card-title{
+  color:#2F5D34;
+  font-weight:700;
+}
+
+.producto-precio{
+  font-size:1.2rem;
+  font-weight:bold;
+  color:#E68A1F;
+}
+
+.btn-comprar{
+  background:#2F5D34;
+  color:white;
+  border:none;
+  border-radius:30px;
+  width:100%;
+}
+
+.btn-comprar:hover{
+  background:#4F8A54;
+}
+
+
+
+
+
+/* =========================================
+   CARRITO BIOVIDA
+========================================= */
+
+.carrito-section {
+    min-height: 75vh;
+    padding: 80px 0;
+    background: var(--crema);
+}
+
+.carrito-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.carrito-etiqueta {
+    display: inline-block;
+    background: var(--verde-claro);
+    color: var(--verde-principal);
+    padding: 9px 20px;
+    border-radius: 30px;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.carrito-header h1 {
+    color: var(--verde-principal);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.carrito-header p {
+    color: #777;
+}
+
+/* PRODUCTOS */
+
+.carrito-productos {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.carrito-producto:last-child {
+    border-bottom: none;
+}
+
+.producto-icono {
+    width: 75px;
+    height: 75px;
+    background: var(--verde-claro);
+    color: var(--verde-principal);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.producto-info {
+    flex: 1;
+}
+
+.producto-info h5 {
+    color: var(--verde-principal);
+    font-weight: 700;
+}
+
+.producto-info p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cantidad-control button {
+    border: none;
+    background: var(--verde-claro);
+    color: var(--verde-principal);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.cantidad-control button:hover {
+    background: var(--verde-principal);
+    color: white;
+}
+
+.producto-precio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.producto-precio strong {
+    color: var(--verde-principal);
+    font-size: 1.1rem;
+}
+
+.eliminar-producto {
+    border: none;
+    background: transparent;
+    color: #dc5555;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* RESUMEN */
+
+.resumen-carrito {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    position: sticky;
+    top: 130px;
+}
+
+.resumen-carrito h3 {
+    color: var(--verde-principal);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    color: #666;
+}
+
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.resumen-total strong {
+    color: var(--verde-principal);
+    font-size: 1.3rem;
+}
+
+.btn-comprar {
+    width: 100%;
+    border: none;
+    background: var(--verde-principal);
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-top: 25px;
+    transition: .3s;
+}
+
+.btn-comprar:hover {
+    background: var(--verde-secundario);
+    transform: translateY(-3px);
+}
+
+.carrito-nota {
+    text-align: center;
+    color: #888;
+    font-size: .8rem;
+    margin-top: 20px;
+}
+
+/* CARRITO VACÍO */
+
+.carrito-vacio {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 70px 20px;
+}
+
+.carrito-vacio i {
+    font-size: 4rem;
+    color: var(--verde-secundario);
+}
+
+.carrito-vacio h3 {
+    color: var(--verde-principal);
+    margin-top: 20px;
+}
+
+/* COMPRA EXITOSA */
+
+.compra-exitosa {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 60px 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.compra-icono {
+    font-size: 5rem;
+    color: var(--verde-secundario);
+    margin-bottom: 20px;
+}
+
+.compra-exitosa h1 {
+    color: var(--verde-principal);
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.compra-exitosa h3 {
+    color: var(--verde-secundario);
+    margin: 20px 0;
+}
+
+.compra-exitosa p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.mensaje-ecologico {
+    background: var(--verde-claro);
+    padding: 22px;
+    border-radius: 15px;
+    color: var(--verde-principal);
+    margin: 30px 0;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.mensaje-ecologico i {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* BOTÓN AGREGAR AL CARRITO */
+
+.producto-card .btn-comprar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background: var(--verde-principal);
+    color: white !important;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 13px 20px;
+
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+.producto-card .btn-comprar:hover {
+    background: var(--verde-secundario);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(47,93,52,.2);
+}
+
+.producto-card .btn-comprar:active {
+    transform: scale(.97);
+}
+
+.producto-card .btn-comprar i {
+    font-size: 1.1rem;
+}
+
+.btn-seguir-comprando {
+    background: var(--verde-principal);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-seguir-comprando:hover {
+    background: var(--verde-secundario);
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .carrito-section {
+        padding: 50px 0;
+    }
+
+    .carrito-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .carrito-producto {
+        gap: 12px;
+    }
+
+    .producto-icono {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+
+    .producto-info h5 {
+        font-size: .9rem;
+    }
+
+    .producto-precio strong {
+        font-size: .9rem;
+    }
+
+    .resumen-carrito {
+        position: static;
+    }
+
+    .compra-exitosa {
+        padding: 40px 20px;
+    }
+
+    .compra-exitosa h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .carrito-producto {
+        flex-wrap: wrap;
+    }
+
+    .producto-precio {
+        margin-left: auto;
+    }
+
+}

@@ -1,0 +1,1916 @@
+/* ==================================================
+   BIOVIDA - HOJA DE ESTILOS PRINCIPAL
+   Versión limpia, organizada y responsive
+================================================== */
+
+
+/* ==================================================
+   1. VARIABLES GLOBALES
+================================================== */
+
+:root {
+    --verde-principal: #2F5D34;
+    --verde-secundario: #4F8A54;
+    --verde-claro: #DDEED8;
+    --naranja: #D6A46A;
+    --naranja-intenso: #E68A1F;
+    --crema: #F7F4EA;
+    --texto: #333333;
+    --blanco: #FFFFFF;
+
+    --header-superior: 85px;
+    --header-menu: 55px;
+    --header-total: 140px;
+}
+
+
+/* ==================================================
+   2. ESTILOS GENERALES
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-total) + 15px);
+}
+
+body {
+    background: var(--crema);
+    color: var(--texto);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    padding-top: var(--header-total);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    transition: .3s ease;
+}
+
+
+/* ==================================================
+   3. HEADER BIOVIDA
+================================================== */
+
+.biovida-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: var(--crema);
+}
+
+/* Barra superior */
+
+.navbar-top {
+    position: relative;
+    width: 100%;
+    height: var(--header-superior);
+    min-height: var(--header-superior);
+    background: var(--crema);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid rgba(47,93,52,.15);
+}
+
+/* Logo */
+
+.logo-biovida {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-title {
+    color: var(--verde-principal);
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.logo-subtitle {
+    color: #777;
+    font-size: .62rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.header-message {
+    color: var(--verde-principal);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.header-message i {
+    color: var(--verde-secundario);
+    margin-right: 6px;
+}
+
+
+/* ==================================================
+   4. MENÚ DE NAVEGACIÓN
+================================================== */
+
+.navbar-menu {
+    position: relative;
+    width: 100%;
+    height: var(--header-menu);
+    min-height: var(--header-menu);
+    background: var(--verde-principal);
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar-menu .navbar-nav {
+    margin-left: auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-menu .nav-link {
+    position: relative;
+    color: white !important;
+    font-weight: 600;
+    padding: 13px 17px !important;
+}
+
+.navbar-menu .nav-link:hover {
+    color: var(--naranja) !important;
+}
+
+.navbar-menu .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--naranja);
+    bottom: 5px;
+    left: 17px;
+    transition: .3s;
+}
+
+.navbar-menu .nav-link:hover::after {
+    width: calc(100% - 34px);
+}
+
+/* Carrito del menú */
+
+.cart-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-menu i {
+    font-size: 1.3rem;
+}
+
+.cart-badge {
+    background: var(--naranja);
+    color: white;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border: 1px solid white;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+
+/* ==================================================
+   5. CARRUSEL PRINCIPAL
+================================================== */
+
+.carousel-biovida {
+    position: relative;
+    overflow: hidden;
+    background: #1d3a21;
+}
+
+.carousel-biovida .carousel-item {
+    height: 620px;
+    position: relative;
+}
+
+.carousel-biovida-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Capa oscura */
+
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(15,35,19,.88) 0%,
+        rgba(15,35,19,.62) 50%,
+        rgba(15,35,19,.12) 100%
+    );
+}
+
+/* Contenido */
+
+.carousel-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.carousel-caption-biovida {
+    width: 65%;
+    color: white;
+    pointer-events: auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(221,238,216,.18);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: #d9efc8;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.carousel-caption-biovida h1 {
+    font-size: 3.8rem;
+    font-weight: 900;
+    line-height: 1.12;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.carousel-caption-biovida h1 span {
+    color: var(--naranja);
+    display: block;
+}
+
+.carousel-caption-biovida p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 550px;
+    color: rgba(255,255,255,.9);
+    margin-bottom: 30px;
+}
+
+/* Botones */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-carousel-btn,
+.hero-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.hero-carousel-btn {
+    background: var(--naranja);
+    color: white;
+}
+
+.hero-carousel-btn:hover {
+    background: #bd8950;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.hero-secondary-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.hero-secondary-btn:hover {
+    background: white;
+    color: var(--verde-principal);
+}
+
+/* Indicadores */
+
+.carousel-biovida .carousel-indicators {
+    margin-bottom: 25px;
+    z-index: 5;
+}
+
+.carousel-biovida .carousel-indicators button {
+    width: 35px;
+    height: 5px;
+    border: 0;
+    border-radius: 10px;
+    background: white;
+    opacity: .5;
+}
+
+.carousel-biovida .carousel-indicators button.active {
+    background: var(--naranja);
+    opacity: 1;
+}
+
+/* Flechas */
+
+.carousel-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.carousel-arrow:hover {
+    background: var(--naranja);
+}
+
+
+/* ==================================================
+   6. SECCIÓN NOSOTROS
+================================================== */
+
+.nosotros-hero {
+    background: linear-gradient(
+        135deg,
+        var(--crema),
+        var(--verde-claro)
+    );
+    padding: 90px 0;
+}
+
+.badge-bio {
+    background: var(--verde-principal);
+    color: var(--blanco);
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 14px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: var(--verde-principal);
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #555;
+    margin: 25px 0;
+}
+
+/* Botones */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.hero-btn {
+    background: var(--verde-principal);
+    color: var(--blanco) !important;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background: #1d3a21;
+    transform: translateY(-2px);
+}
+
+.hero-btn-outline {
+    background: var(--blanco);
+    color: var(--verde-principal) !important;
+    border: 2px solid var(--verde-principal);
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.hero-btn-outline:hover {
+    background: var(--verde-principal);
+    color: var(--blanco) !important;
+}
+
+.hero-image {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+
+/* ==================================================
+   7. TÍTULOS Y TARJETAS
+================================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: var(--verde-principal);
+    font-weight: 700;
+}
+
+.section-title p {
+    color: #666;
+}
+
+.info-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.info-card h3 {
+    margin-top: 20px;
+    color: var(--verde-principal);
+}
+
+.info-card p {
+    padding: 15px;
+}
+
+
+/* ==================================================
+   8. SECCIÓN DE VALORES
+================================================== */
+
+.valores-section {
+    background: var(--verde-claro);
+    padding: 80px 0;
+}
+
+.valor-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: .3s;
+    height: 100%;
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+}
+
+.valor-card h5 {
+    margin-top: 15px;
+    color: var(--verde-principal);
+}
+
+
+/* ==================================================
+   9. MISIÓN Y VISIÓN
+================================================== */
+
+.purpose-card {
+    background: var(--blanco);
+    padding: 35px;
+    border-left: 5px solid var(--naranja);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    height: 100%;
+}
+
+.purpose-card h3 {
+    color: var(--verde-principal);
+}
+
+
+/* ==================================================
+   10. LLAMADA A LA ACCIÓN
+================================================== */
+
+.cta-biovida {
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        #1d3a21
+    );
+    color: var(--blanco);
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    border-radius: 50px;
+    padding: 14px 35px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    background: #d6760f;
+    color: var(--blanco);
+}
+
+
+/* ==================================================
+   11. CONTACTOS Y PRÓXIMOS PASOS
+================================================== */
+
+#next-steps {
+    display: flex;
+    background: var(--blanco);
+    margin-top: 50px;
+}
+
+#docs,
+#social {
+    flex: 1;
+    padding: 40px;
+}
+
+#docs {
+    border-right: 1px solid #ddd;
+}
+
+#next-steps h2 {
+    color: var(--verde-principal);
+}
+
+#next-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+#next-steps li {
+    margin: 10px 0;
+}
+
+#next-steps a {
+    color: #444;
+    text-decoration: none;
+}
+
+#next-steps a:hover {
+    color: var(--verde-principal);
+}
+
+
+/* ==================================================
+   12. BENEFICIOS BIOVIDA
+================================================== */
+
+.beneficios-section {
+    background: var(--naranja);
+    padding: 25px 0;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.beneficio-card {
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    border-radius: 16px;
+    color: var(--blanco);
+    font-weight: 600;
+    transition: .3s;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,.18);
+}
+
+.beneficio-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--verde-principal);
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+
+/* ==================================================
+   13. CARRITO BIOVIDA
+================================================== */
+
+.carrito-section {
+    min-height: 75vh;
+    padding: 65px 0;
+    background: var(--crema);
+}
+
+/* Título */
+
+.carrito-titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.carrito-titulo h2 {
+    color: var(--verde-principal);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.carrito-titulo p {
+    color: #777;
+}
+
+/* Carrito vacío */
+
+.carrito-vacio {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 65px 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.07);
+}
+
+.carrito-vacio > i {
+    font-size: 4rem;
+    color: var(--verde-secundario);
+}
+
+.carrito-vacio h3 {
+    color: var(--verde-principal);
+    margin: 20px 0;
+}
+
+/* Productos */
+
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.06);
+}
+
+.carrito-producto img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.carrito-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.carrito-info h5 {
+    color: var(--verde-principal);
+    font-weight: 700;
+}
+
+.carrito-info p {
+    color: var(--naranja-intenso);
+    font-weight: 700;
+}
+
+/* Cantidad */
+
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cantidad-control button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: var(--verde-principal);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cantidad-control span {
+    font-weight: 700;
+}
+
+/* Eliminar */
+
+.eliminar-producto {
+    border: none;
+    background: transparent;
+    color: #d9534f;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* Resumen */
+
+.carrito-resumen {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.07);
+}
+
+.carrito-resumen h4 {
+    color: var(--verde-principal);
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.resumen-linea,
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.resumen-total {
+    color: var(--verde-principal);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.carrito-nota {
+    color: #777;
+    font-size: .85rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carrito-nota i {
+    color: var(--verde-secundario);
+}
+
+/* Botón comprar */
+
+.btn-comprar {
+    background: var(--verde-principal);
+    border: none;
+    color: white !important;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-comprar:hover {
+    background: var(--verde-secundario);
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   14. MODAL DE AGRADECIMIENTO
+   DISEÑO UNIFICADO PARA WEB Y MÓVIL
+================================================== */
+
+/* Fondo */
+
+.agradecimiento-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0,0,0,.65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Ventana */
+
+.agradecimiento-modal {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background: white;
+    border-radius: 22px;
+
+    box-shadow: 0 15px 50px rgba(0,0,0,.25);
+
+    animation: aparecerModal .3s ease;
+}
+
+/* Animación */
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cabecera */
+
+.agradecimiento-header {
+    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        var(--verde-secundario)
+    );
+
+    color: white;
+    text-align: center;
+
+    padding: 35px 25px;
+}
+
+/* Botón cerrar */
+
+.modal-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Icono */
+
+.agradecimiento-icono {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    background: white;
+    color: var(--verde-principal);
+
+    border-radius: 50%;
+
+    font-size: 2.5rem;
+}
+
+.agradecimiento-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.agradecimiento-header p {
+    margin: 0;
+}
+
+/* Cuerpo */
+
+.agradecimiento-body {
+    padding: 30px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.agradecimiento-body h4 {
+    color: var(--verde-principal);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Frase sustentable */
+
+.frase-sustentable {
+    background: var(--verde-claro);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.frase-sustentable i {
+    color: var(--verde-principal);
+    font-size: 2rem;
+}
+
+.frase-sustentable p {
+    color: var(--verde-principal);
+    font-weight: 600;
+    font-style: italic;
+    margin: 10px 0 0;
+}
+
+/* Mensaje final */
+
+.mensaje-final {
+    text-align: center;
+    color: var(--verde-principal);
+    font-weight: 800;
+}
+
+/* Pie */
+
+.agradecimiento-footer {
+    padding: 0 30px 30px;
+    text-align: center;
+}
+
+
+/* ==================================================
+   15. RESPONSIVE - TABLETS
+================================================== */
+
+@media (max-width: 991px) {
+
+    :root {
+        --header-superior: 75px;
+        --header-menu: 55px;
+        --header-total: 130px;
+    }
+
+    /* Header */
+
+    .header-message {
+        display: none;
+    }
+
+    .navbar-menu .container {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .navbar-menu .navbar-toggler {
+        margin-left: auto;
+        border: 1px solid white;
+    }
+
+    .navbar-menu .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--verde-principal);
+        padding: 10px 20px 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,.15);
+    }
+
+    .navbar-menu .navbar-nav {
+        width: 100%;
+        align-items: stretch;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+        gap: 0;
+    }
+
+    .navbar-menu .nav-link {
+        padding: 13px !important;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .navbar-menu .nav-link::after {
+        display: none;
+    }
+
+    .cart-menu {
+        justify-content: center;
+    }
+
+    .cart-badge {
+        position: static;
+    }
+
+    /* Nosotros */
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    /* Carrusel */
+
+    .carousel-biovida .carousel-item {
+        height: 540px;
+    }
+
+    .carousel-caption-biovida {
+        width: 80%;
+    }
+
+    .carousel-caption-biovida h1 {
+        font-size: 3rem;
+    }
+
+    /* Beneficios */
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==================================================
+   16. RESPONSIVE - MÓVILES
+================================================== */
+
+@media (max-width: 768px) {
+
+    /* Logo */
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-title {
+        font-size: 1.5rem;
+    }
+
+    .logo-subtitle {
+        font-size: .55rem;
+        letter-spacing: 1px;
+    }
+
+    /* Nosotros */
+
+    .nosotros-hero {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btn,
+    .hero-btn-outline {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Contactos */
+
+    #next-steps {
+        flex-direction: column;
+    }
+
+    #docs {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Carrusel */
+
+    .carousel-biovida .carousel-item {
+        height: 500px;
+    }
+
+    .carousel-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(20,48,25,.85),
+            rgba(20,48,25,.55)
+        );
+    }
+
+    .carousel-container {
+        width: 100%;
+        padding: 0 35px;
+    }
+
+    .carousel-caption-biovida {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-badge {
+        font-size: .7rem;
+        margin-bottom: 20px;
+    }
+
+    .carousel-caption-biovida h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption-biovida p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: .9rem;
+    }
+
+    .carousel-biovida .carousel-control-prev,
+    .carousel-biovida .carousel-control-next {
+        width: 9%;
+    }
+
+    /* Búsqueda */
+
+    .search-container {
+        margin-top: 15px;
+    }
+
+    /* Carrito */
+
+    .carrito-section {
+        padding: 45px 15px;
+    }
+
+    .carrito-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .carrito-producto {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .carrito-producto img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .cantidad-control {
+        gap: 10px;
+    }
+
+    .carrito-resumen {
+        margin-top: 15px;
+    }
+
+    /* Modal */
+
+    .agradecimiento-modal {
+        max-height: 88vh;
+    }
+}
+
+
+/* ==================================================
+   17. RESPONSIVE - CELULARES PEQUEÑOS
+================================================== */
+
+@media (max-width: 576px) {
+
+    :root {
+        --header-superior: 68px;
+        --header-menu: 50px;
+        --header-total: 118px;
+    }
+
+    /* Header */
+
+    .navbar-top {
+        padding: 8px 0;
+    }
+
+    .logo-img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .logo-title {
+        font-size: 1.4rem;
+    }
+
+    .logo-subtitle {
+        font-size: .48rem;
+        letter-spacing: 1px;
+    }
+
+    /* Nosotros */
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .badge-bio {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    /* Tarjetas */
+
+    .card-img {
+        height: 180px;
+    }
+
+    /* Carrusel */
+
+    .carousel-biovida .carousel-item {
+        height: 440px;
+    }
+
+    .carousel-overlay {
+        background: rgba(15,35,19,.72);
+    }
+
+    .carousel-caption-biovida h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption-biovida p {
+        font-size: .9rem;
+    }
+
+    .hero-badge {
+        font-size: .6rem;
+        padding: 7px 12px;
+        letter-spacing: 1px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-carousel-btn,
+    .hero-secondary-btn {
+        width: 85%;
+        padding: 12px 18px;
+        font-size: .85rem;
+    }
+
+    .carousel-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-biovida .carousel-indicators {
+        margin-bottom: 15px;
+    }
+
+    /* CTA */
+
+    .cta-btn {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* Beneficios */
+
+    .beneficios-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 5px;
+        scrollbar-width: none;
+    }
+
+    .beneficios-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .beneficio-card {
+        flex: 0 0 auto;
+        min-width: 220px;
+        padding: 8px 12px;
+        font-size: .8rem;
+    }
+
+    .beneficio-icon {
+        width: 30px;
+        height: 30px;
+        font-size: .9rem;
+    }
+
+    /* Carrito */
+
+    .carrito-section {
+        padding: 40px 0;
+    }
+
+    .carrito-producto img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .carrito-info h5 {
+        font-size: .95rem;
+    }
+
+    .carrito-info p {
+        font-size: .85rem;
+    }
+
+    /* Modal de agradecimiento */
+
+    .agradecimiento-overlay {
+        padding: 12px;
+    }
+
+    .agradecimiento-modal {
+        max-height: 92vh;
+        border-radius: 18px;
+    }
+
+    .agradecimiento-header {
+        padding: 30px 20px;
+    }
+
+    .agradecimiento-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .agradecimiento-icono {
+        width: 65px;
+        height: 65px;
+        font-size: 2.2rem;
+    }
+
+    .agradecimiento-body {
+        padding: 22px;
+        font-size: .95rem;
+    }
+
+    .agradecimiento-footer {
+        padding: 0 22px 25px;
+    }
+}
+
+
+/* ==================================================
+   18. RESPONSIVE - CELULARES MUY PEQUEÑOS
+================================================== */
+
+@media (max-width: 380px) {
+
+    .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-title {
+        font-size: 1.25rem;
+    }
+
+    .carrito-producto {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .carrito-producto img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .cantidad-control {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    .eliminar-producto {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .agradecimiento-header h2 {
+        font-size: 1.45rem;
+    }
+
+    .agradecimiento-icono {
+        width: 55px;
+        height: 55px;
+        font-size: 1.9rem;
+    }
+
+    .agradecimiento-body {
+        padding: 18px;
+        font-size: .9rem;
+    }
+
+    .agradecimiento-footer {
+        padding: 0 18px 20px;
+    }
+}
+
+
+/* ==================================================
+   FIN DEL ARCHIVO CSS - BIOVIDA
+================================================== */
+
+/* BOTÓN AGREGAR AL CARRITO */
+
+.producto-card .btn-comprar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background: var(--verde-principal);
+    color: white !important;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 13px 20px;
+
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+.producto-card .btn-comprar:hover {
+    background: var(--verde-secundario);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(47,93,52,.2);
+}
+
+.producto-card .btn-comprar:active {
+    transform: scale(.97);
+}
+
+.producto-card .btn-comprar i {
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   BIOVIDA - CARRITO
+========================================== */
+
+.carrito-section {
+    min-height: 75vh;
+    padding: 65px 0;
+    background: var(--crema);
+}
+
+.carrito-titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.carrito-titulo h2 {
+    color: var(--verde-principal);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.carrito-titulo p {
+    color: #777;
+}
+
+.carrito-vacio,
+.carrito-producto,
+.carrito-resumen {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.07);
+}
+
+.carrito-vacio {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.carrito-vacio > i {
+    font-size: 4rem;
+    color: var(--verde-secundario);
+}
+
+.carrito-vacio h3 {
+    color: var(--verde-principal);
+    margin: 20px 0;
+}
+
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.carrito-producto img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.carrito-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.carrito-info h5 {
+    color: var(--verde-principal);
+    font-weight: 700;
+}
+
+.carrito-info p {
+    color: var(--naranja-intenso);
+    font-weight: 700;
+}
+
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cantidad-control button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: var(--verde-principal);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cantidad-control span {
+    font-weight: 700;
+}
+
+.eliminar-producto {
+    border: none;
+    background: transparent;
+    color: #d9534f;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.carrito-resumen {
+    padding: 28px;
+}
+
+.carrito-resumen h4 {
+    color: var(--verde-principal);
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.resumen-linea,
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.resumen-total {
+    color: var(--verde-principal);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.carrito-nota {
+    color: #777;
+    font-size: .85rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carrito-nota i {
+    color: var(--verde-secundario);
+}
+
+.btn-comprar {
+    background-color: #2F5D34 !important;
+    border: none !important;
+    color: #FFFFFF !important;
+
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #4F8A54 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+}
+
+.btn-comprar:active,
+.btn-comprar:focus {
+    background-color: #2F5D34 !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+
+/* ==========================================
+   MODAL DE AGRADECIMIENTO
+========================================== */
+
+.agradecimiento-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0,0,0,.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.agradecimiento-modal {
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 15px 50px rgba(0,0,0,.25);
+    animation: aparecerModal .3s ease;
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.agradecimiento-header {
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        var(--verde-secundario)
+    );
+    color: white;
+    text-align: center;
+    padding: 35px 25px;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.agradecimiento-icono {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    background: white;
+    color: var(--verde-principal);
+    border-radius: 50%;
+    font-size: 2.5rem;
+}
+
+.agradecimiento-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.agradecimiento-body {
+    padding: 30px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.agradecimiento-body h4 {
+    color: var(--verde-principal);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.frase-sustentable {
+    background: var(--verde-claro);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.frase-sustentable i {
+    color: var(--verde-principal);
+    font-size: 2rem;
+}
+
+.frase-sustentable p {
+    color: var(--verde-principal);
+    font-weight: 600;
+    font-style: italic;
+    margin: 10px 0 0;
+}
+
+.mensaje-final {
+    text-align: center;
+    color: var(--verde-principal);
+    font-weight: 800;
+}
+
+.agradecimiento-footer {
+    padding: 0 30px 30px;
+    text-align: center;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .carrito-section {
+        padding: 45px 15px;
+    }
+
+    .carrito-producto {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .carrito-producto img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .carrito-resumen {
+        margin-top: 15px;
+    }
+
+    .agradecimiento-modal {
+        max-height: 88vh;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .carrito-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .carrito-producto {
+        gap: 12px;
+    }
+
+    .carrito-producto img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .agradecimiento-overlay {
+        padding: 12px;
+    }
+
+    .agradecimiento-modal {
+        max-height: 92vh;
+        border-radius: 18px;
+    }
+
+    .agradecimiento-header {
+        padding: 30px 20px;
+    }
+
+    .agradecimiento-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .agradecimiento-body {
+        padding: 22px;
+    }
+
+    .agradecimiento-footer {
+        padding: 0 22px 25px;
+    }
+}
+

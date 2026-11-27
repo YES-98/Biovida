@@ -1,0 +1,260 @@
+.nosotros-hero {
+  background: #f5efe3;
+  padding: 80px 0;
+}
+
+.badge-bio {
+  background: #2f5d34;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #1d3a21;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.hero-text {
+  font-size: 18px;
+  color: #555;
+  margin: 25px 0;
+}
+
+.hero-btn {
+  background: #2f5d34;
+  color: white;
+  border-radius: 30px;
+  padding: 12px 35px;
+}
+
+.hero-btn:hover {
+  background: #1d3a21;
+  color: white;
+}
+
+.hero-image {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  color: #1d3a21;
+  font-weight: 700;
+}
+
+.section-title p {
+  color: #777;
+}
+
+.info-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  text-align: center;
+  height: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.info-card h3 {
+  margin-top: 20px;
+  color: #2f5d34;
+}
+
+.info-card p {
+  padding: 15px;
+}
+
+.valores-section {
+  background: #f5efe3;
+  padding: 80px 0;
+}
+
+.valor-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 2rem;
+  transition: .3s;
+}
+
+.valor-card:hover {
+  transform: translateY(-10px);
+}
+
+.valor-card h5 {
+  margin-top: 15px;
+  color: #2f5d34;
+}
+
+.purpose-card {
+  background: white;
+  padding: 35px;
+  border-left: 5px solid #e68a1f;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  height: 100%;
+}
+
+.purpose-card h3 {
+  color: #2f5d34;
+}
+
+.cta-biovida {
+  background: linear-gradient(
+    135deg,
+    #2f5d34,
+    #1d3a21
+  );
+  color: white;
+  padding: 90px 20px;
+}
+
+.cta-btn {
+  background: #e68a1f;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+
+.cta-btn:hover {
+  background: #d67b16;
+  color: white;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+  .hero-title {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .hero-btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .valor-card {
+    margin-bottom: 20px;
+  }
+
+  .purpose-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+  .nosotros-hero {
+    padding: 60px 15px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .card-img {
+    height: 200px;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .info-card {
+    margin-bottom: 25px;
+  }
+
+  .valor-card {
+    padding: 25px;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .valor-card h5 {
+    font-size: 1.2rem;
+  }
+
+  .purpose-card {
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+
+  .cta-biovida {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .badge-bio {
+    font-size: 12px;
+ }
+ }

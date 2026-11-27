@@ -1,0 +1,113 @@
+
+.biovida-likes {
+    padding: 75px 20px;
+    background: linear-gradient(135deg, #edf5e9, #f7f4ea);
+    text-align: center;
+}
+
+.likes-contenido {
+    max-width: 650px;
+    margin: auto;
+    padding: 40px 25px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+}
+
+.likes-icono {
+    font-size: 45px;
+    color: #e66b64;
+    margin-bottom: 15px;
+}
+
+.likes-contenido h2 {
+    color: var(--verde-principal);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.likes-contenido > p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.likes-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 40px;
+    background: var(--verde-principal);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.likes-boton:hover:not(:disabled) {
+    background: var(--verde-secundario);
+    transform: translateY(-3px);
+}
+
+.likes-boton:disabled {
+    opacity: .8;
+    cursor: default;
+}
+
+.likes-boton.liked {
+    background: #e66b64;
+}
+
+.likes-contador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.likes-contador strong {
+    color: var(--verde-principal);
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.likes-contador span {
+    color: #666;
+    font-size: 1rem;
+}
+
+.likes-mensaje {
+    margin-top: 25px;
+    color: #68815f;
+    font-size: .9rem;
+}
+
+.likes-mensaje i {
+    margin-right: 7px;
+}
+
+@media (max-width: 576px) {
+    .biovida-likes {
+        padding: 45px 15px;
+    }
+
+    .likes-contenido {
+        padding: 30px 18px;
+    }
+
+    .likes-contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .likes-boton {
+        width: 100%;
+        padding: 13px 15px;
+    }
+
+    .likes-contador strong {
+        font-size: 2.3rem;
+    }
+}

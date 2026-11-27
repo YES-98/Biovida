@@ -16,7 +16,7 @@ function Productos() {
       id: 1,
       nombre: "EcoPeel Decorativo",
       descripcion: "Pieza artesanal biodegradable elaborada a partir de residuos cítricos.",
-      precio: 30,
+      precio: 80,
       imagen: producto1
     },
     

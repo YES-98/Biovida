@@ -10,19 +10,19 @@ function Nav() {
   return (
     <header className="biovida-header">
 
-      <nav className="navbar navbar-top">
+      <nav className="navbar navbar-top inicio">
         <div className="container">
 
-          <Link to="/" className="logo-biovida">
-            <img src={logo} alt="Logo BIOVIDA" className="logo-img" />
+         <a href="/#inicio" className="logo-biovida">
+  <img src={logo} alt="Logo BIOVIDA" className="logo-img" />
 
-            <div className="logo-text">
-              <h1 className="logo-title">BIOVIDA</h1>
-              <span className="logo-subtitle">
-                SALUD Y SUSTENTABILIDAD
-              </span>
-            </div>
-          </Link>
+  <div className="logo-text">
+    <h1 className="logo-title">BIOVIDA</h1>
+    <span className="logo-subtitle">
+      SALUD Y SUSTENTABILIDAD
+    </span>
+  </div>
+</a>
 
           <span className="header-message">
             <i className="bi bi-leaf"></i>
@@ -53,8 +53,10 @@ function Nav() {
           >
             <ul className="navbar-nav align-items-lg-center">
 
-              <li className="nav-item">
-                <Link className="nav-link" to="/">Inicio</Link>
+             <li className="nav-item">
+                <a className="nav-link" href="/#inicio">
+                  Inico
+                </a>
               </li>
 
               <li className="nav-item">

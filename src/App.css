@@ -850,6 +850,237 @@ a {
 }
 
 
+/* ==========================================
+   BIOVIDA - CARRITO RESPONSIVE
+========================================== */
+
+.carrito-section {
+    padding: 70px 0;
+    background: #F7F4EA;
+}
+
+.carrito-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carrito-titulo h2 {
+    color: var(--verde-principal);
+    font-weight: 700;
+}
+
+.carrito-titulo p {
+    color: #666;
+}
+
+/* PRODUCTO */
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 18px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.07);
+    min-width: 0;
+}
+
+.carrito-producto img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.carrito-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.carrito-info h5 {
+    color: var(--verde-principal);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.carrito-info p {
+    color: var(--naranja-intenso);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* CANTIDAD */
+.cantidad-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background: #fff;
+}
+
+.cantidad-control button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: var(--verde-principal);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.cantidad-control button:hover {
+    background: var(--verde-secundario);
+}
+
+.cantidad-control span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+}
+
+/* ELIMINAR */
+.eliminar-producto {
+    border: none;
+    background: transparent;
+    color: #c0392b;
+    font-size: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* RESUMEN */
+.carrito-resumen {
+    padding: 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.07);
+}
+
+.carrito-resumen h4 {
+    color: var(--verde-principal);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.resumen-linea,
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.resumen-linea span:last-child,
+.resumen-total strong {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.resumen-total {
+    font-size: 1.2rem;
+    color: var(--verde-principal);
+}
+
+.carrito-nota {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+/* CARRITO VACÍO */
+.carrito-vacio {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 18px;
+}
+
+.carrito-vacio > i {
+    font-size: 55px;
+    color: var(--verde-principal);
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .carrito-section {
+        padding: 45px 15px;
+    }
+
+    .carrito-producto {
+        gap: 14px;
+        padding: 15px;
+    }
+
+    .carrito-producto img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .carrito-resumen {
+        margin-top: 10px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+    .carrito-producto {
+        display: grid;
+        grid-template-columns: 75px minmax(0, 1fr) 28px;
+        gap: 10px;
+        padding: 12px;
+        align-items: center;
+    }
+
+    .carrito-producto img {
+        width: 75px;
+        height: 85px;
+    }
+
+    .carrito-info h5 {
+        font-size: .95rem;
+    }
+
+    .carrito-info p {
+        font-size: .95rem;
+        margin-bottom: 8px;
+    }
+
+    .cantidad-control {
+        gap: 10px;
+        padding: 4px 8px;
+    }
+
+    .cantidad-control button {
+        width: 27px;
+        height: 27px;
+    }
+
+    .eliminar-producto {
+        font-size: 18px;
+    }
+
+    .carrito-resumen {
+        padding: 18px;
+    }
+
+    .resumen-total {
+        font-size: 1.05rem;
+    }
+}
+
 /* ==================================================
    14. MODAL DE AGRADECIMIENTO
    DISEÑO UNIFICADO PARA WEB Y MÓVIL

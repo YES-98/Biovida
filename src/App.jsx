@@ -10,12 +10,14 @@ import Carousel from "./Carousel.jsx";
 import Nosotros from "./Nosotros.jsx";
 import Productos from "./Productos.jsx";
 import Carrito from "./Carrito.jsx";
+import MeGusta from "./MeGusta";
 
 function Inicio() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+     <div id="inicio"></div>
       <Carousel />
 
       <section className="beneficios-section">
@@ -153,17 +155,7 @@ function Inicio() {
 
       {/* CONTADOR */}
 
-      <section className="container text-center my-5">
-
-        <button
-          className="btn btn-success"
-          onClick={() => setCount(count + 1)}
-        >
-          Me gusta BIOVIDA ❤️ {count}
-        </button>
-
-      </section>
-
+      < MeGusta />
       {/* CONTACTO */}
 
       <section id="next-steps">

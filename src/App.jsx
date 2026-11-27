@@ -8,7 +8,7 @@ import Dio from "./assets/dio.png";
 import "./App.css";
 
 import Nav from "./Nav";
-import Carousel from "./src/Carousel";
+import Carousel from "./carousel";
 import Nosotros from "./Nosotros";
 import Productos from "./Productos";
 import Carrito from "./Carrito";
